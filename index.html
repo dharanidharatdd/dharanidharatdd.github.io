@@ -59,11 +59,11 @@
                             <i class="uil uil-scenery nav__icon"></i> Portfolio
                         </a>
                     </li>
-                    <li class="nav__item">
+                    <!-- <li class="nav__item">
                         <a href="#articles" class="nav__link">
                             <i class="uil uil-book-open nav__icon"></i> Articles
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="uil uil-estate nav__icon"></i> Contact Me
@@ -174,7 +174,7 @@
                         </div>
                     </div>
                     <div class="about__buttons">
-                        <a href="https://raw.githubusercontent.com/dharanidharatdd/Resume/main/dharanidhara_resume.pdf" target="_blank" class="button button--flex">
+                        <a href="" class="button button--flex" id="resume">
                             Download Resume <i class="uil uil-download-alt button__icon"></i>
                         </a>
                     </div>
@@ -818,6 +818,31 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var resumeLink = document.getElementById('resume');
+            if (!resumeLink) {
+                console.error('Element with ID "resume" not found');
+                return;
+            }
+    
+            resumeLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+    
+                var URL = "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/dharanidharatdd/Resume/main/dharanidhara_resume.pdf";
+                var newTab = window.open(URL, '_blank'); // Open the PDF in a new tab
+    
+                // Check if the new tab has loaded successfully
+                var checkLoad = setInterval(function() {
+                    if (newTab.closed) {
+                        clearInterval(checkLoad);
+                        console.error('Failed to load PDF. Reloading the page...');
+                        window.location.reload(); // Reload the page if the PDF failed to load
+                    }
+                }, 1000); // Check every second
+            });
+        });
+    </script>
 
     <!--==================== SCROLL TOP ====================-->
     <a href="" class="scrollup" id="scroll-up">
