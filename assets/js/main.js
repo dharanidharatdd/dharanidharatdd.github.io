@@ -156,6 +156,15 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Smooth scroll to top
+document.getElementById('scroll-up').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling
+    });
+});
+
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader(){
     const nav = document.getElementById('header');
