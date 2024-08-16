@@ -70,9 +70,21 @@
     }
 }
 
+/*========== Variables Light theme (default) ==========*/
+:root {
+    --first-color-second: hsl(var(--hue-color), 30%, 95%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 35%);
+    --input-color: hsl(var(--hue-color), 29%, 96%);
+    --body-color: hsl(var(--hue-color), 28%, 98%);
+    --container-color: hsl(var(--hue-color), 29%, 96%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 88%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 76%);
+    --scrollup-color: black;
+}
+
 /*========== Variables Dark theme ==========*/
-body.dark-theme{
-    /* HSL color mode */
+body.dark-theme {
     --first-color-second: hsl(var(--hue-color), 30%, 8%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
@@ -81,25 +93,25 @@ body.dark-theme{
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-    --scrollup-color: white
+    --scrollup-color: white;
 }
 
 /*========== Button Dark/Light ==========*/
-.nav__btns{
+.nav__btns {
     display: flex;
     align-items: center;
 }
 
-.change-theme{
+.change-theme {
     font-size: 1.25rem;
     color: var(--title-color);
     margin-right: var(--mb-1);
     cursor: pointer;
-    padding-left:10px;
-    padding-right:10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.change-theme:hover{
+.change-theme:hover {
     color: var(--first-color);
 }
 
