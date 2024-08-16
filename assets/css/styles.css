@@ -117,7 +117,7 @@ body.dark-theme {
 
 /* Add transitions to body and other elements */
 body, header, .about__container, .nav__menu, .footer__link, .footer__social, .scrollup, .home__container, .home__content, .button, .Expertise__content {
-    transition: background-color 2s ease, color 0.5s ease;
+    transition: background-color 1.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s linear;
 }
 
 /*==================== BASE ====================*/
