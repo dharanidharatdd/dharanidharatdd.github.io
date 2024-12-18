@@ -624,6 +624,10 @@ img{
     font-weight: var(--font-medium);
 }
 
+.custom-link{
+    color: var(--first-color);
+}
+
 .qualification__subtitle{
     display: inline-block;
     font-size: var(--small-font-size);
